@@ -1,2 +1,2 @@
 # Mermaidflow
-Creating a flowchart for DCD in Mermaid
+Creating a flowchart for DCD using Mermaid
