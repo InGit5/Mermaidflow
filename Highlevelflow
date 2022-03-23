@@ -11,6 +11,7 @@ node "Assets" {
   [Topside Facilities]
   [Substructure]
   [Transport]
+  [Sopra Steria]
 }
 
 
