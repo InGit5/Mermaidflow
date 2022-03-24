@@ -1,7 +1,13 @@
-@startuml
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 database "CommonLib"
 
+Person(personAlias, "Business Analyst", "Optional Description")
+System(systemAlias, "DCD", "Digital Concept Development")
+Container(containerAlias, "STEA", "Excel sheet")
+
+Rel(personAlias, systemAlias, "Create projects", "Analyse concepts and costs")
 
 node "Assets" {
   [Drainage strategy]
@@ -13,7 +19,6 @@ node "Assets" {
   [Transport]
   [Sopra Steria]
 }
-
 
 database "CommonLib"
 
@@ -27,8 +32,6 @@ component STEA
 [Business Case] -> STEA
 STEA -> [Business Case]
 
-
-
 [CommonLib] -up-> [Business Case]
 
 [Drainage strategy] ..> [Business Case]
@@ -39,6 +42,5 @@ STEA -> [Business Case]
 [Substructure] ..> [Business Case]
 [Transport] ..> [Business Case]
 
-
-
 @enduml
+
